@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <main *ngIf="convocatoriaEspecificaPost$ | async as convoEsp">
+           <h1>{{ convoEsp.fields.tituloConvocatoria }}</h1>
+          <p>{{ convoEsp.fields.descripcionConvocatoria }}</p>
+      </main>
+    </div>
+  </div>
+</div>

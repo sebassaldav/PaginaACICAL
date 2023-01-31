@@ -1,0 +1,25 @@
+.institucional{
+  width: 100%;
+  height: 15%;
+  margin: 10px;
+}
+
+.grid{
+  float: left;
+  width: 24%;
+  text-align: center;
+  margin: 5px;
+}
+
+img{
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+
+p{
+  width: 100%;
+  height: 210px;
+  text-align: justify;
+}
+

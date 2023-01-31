@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 style="justify-content: center; text-align: center;">Régimen Tributario Especial</h1>
+      <section *ngIf="regimenTributarioPost$ | async as regimenTributarioPosts">
+        <div>
+          <div *ngFor="let regimenTributarioPost of regimenTributarioPosts.items">
+            <div class="grid">
+              <a [href]="regimenTributarioPost.fields.archivo.fields.file.url" target="_blank">
+                <h2>{{ regimenTributarioPost.fields.nombreArchivo }}</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

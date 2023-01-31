@@ -1,0 +1,13 @@
+li{
+  font-size: 30px;
+}
+
+ul
+{
+  list-style: none;
+}
+
+
+@media (max-width: 450px) {
+  li {font-size: 10px;}
+}

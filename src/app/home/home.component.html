@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+      <div *ngIf="logoPost$ | async as logoPost">
+        <img
+          class="logo"
+          [src]="logoPost.fields.logotipo.fields.file.url"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <h1>ASOCIACIÓN DE CABILDOS INDÍGENAS DE CALDAS</h1>
+    </div>
+  </div>
+</div>
+<br>
+<app-carousel></app-carousel>
+<br>
+<app-institucional></app-institucional>
+<br>
+<app-regimen></app-regimen>
+<br>
+<app-convocatoria></app-convocatoria>
+<app-actividades></app-actividades>
+ <app-contacto></app-contacto>

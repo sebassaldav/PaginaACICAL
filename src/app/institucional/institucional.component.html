@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <section *ngIf="misionVisionPost$ | async as misionPost">
+    <div class="row">
+      <div *ngFor="let misionPosts of misionPost.items">
+        <div class="col-md-4">
+          <h2>{{ misionPosts.fields.titulo }}</h2>
+          <p> {{ misionPosts.fields.descripcionI }}</p>
+          <img [src]="misionPosts.fields.imgMisionVision.fields.file.url" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
