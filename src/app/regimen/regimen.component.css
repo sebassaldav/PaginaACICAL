@@ -12,3 +12,19 @@
   align-items: center;
   margin: 10px;
 }
+
+.container-fluid{
+  padding: 15px;
+  background-color: #F9EB5A;
+}
+
+.btn-light{
+  background-color: #5069AD;
+  color: whitesmoke;
+  border: #5069AD;
+}
+
+.btn-light:hover{
+  background-color: #668EFA;
+  border: white;
+}

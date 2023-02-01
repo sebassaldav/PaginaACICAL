@@ -18,3 +18,20 @@ i{
 input, textarea{
   margin-bottom: 10px;
 }
+
+label{
+  font-style: italic;
+  font-weight: 100;
+}
+
+.container-fluid{
+  padding: 15px;
+  background-color: #002F17;
+  color: whitesmoke;
+}
+
+.btn{
+  background-color: #5069AD;
+  color: whitesmoke;
+  border: #5069AD;
+}

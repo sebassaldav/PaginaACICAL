@@ -11,6 +11,13 @@ img {
   font-weight: bold;
 }
 
+.gradient-text {
+  /* background-image: linear-gradient(90deg, #0099ff, #fffb00, #ff0000); */
+  background-image: linear-gradient(90deg, rgba(0,153,255,1) 0%, rgba(0,153,255,1) 25%, rgba(255,251,0,1) 31%, rgba(255,251,0,1) 68%, rgba(255,0,0,1) 83%, rgba(255,0,0,1) 100%);
+  background-clip: text;
+  color: transparent;
+}
+
 app-carousel {
   position: relative;
   display: flex;

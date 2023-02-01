@@ -2,7 +2,7 @@
     width: 500px;
     margin-left: auto;
     margin-right: auto;
-    background-color: lightgoldenrodyellow;
+    background-color: #C5E2FF;
     height: 550px;
 }
 
@@ -11,4 +11,21 @@
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+}
+
+ul{
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+}
+
+a{
+    color: black;
+
+}
+
+a:visited{
+    color: #7D0071;
 }
