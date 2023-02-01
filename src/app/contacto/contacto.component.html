@@ -1,33 +1,38 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6 col-sm-12">
-      <h2>INFORMACIÓN CONTACTO</h2>
+      <h2>Información de contacto</h2>
       <ul class="font">
-        <li><i class="bi bi-calendar-week"></i>  Horario: 8 a.m a 12 m y 2 p.m a 6 p.m</li>
-        <li><i class="bi bi-geo-alt-fill"></i>  Dirección: Riosucio Caldas, Comunidad El Edén, Vía Bonafont, Casa Grande CRIDEC</li>
-        <li><i class="bi bi-telephone-inbound"></i>  Teléfonos: 321 830 69 68 - 300 220 43 98</li>
-        <li><i class="bi bi-envelope-at"></i> Correo electrónico: acical12@gmail.com</li>
-        <li><i class="bi bi-browser-chrome"></i> Página Web: www.acical.org</li>
-        <li><i class="bi bi-globe"></i> Riosucio Caldas</li>
+        <li><i class="bi bi-clock"></i>8AM a 12M y 2PM a 6PM</li>
+        <li><i class="bi bi-geo"></i>Riosucio, Caldas</li>
+        <li><i class="bi bi-geo-alt-fill"></i><a target="_blank" href="https://goo.gl/maps/enSh6DoTqj9MguWp8">Comunidad El Edén, Vía Bonafont, Casa Grande CRIDEC</a></li>
+        <li><i class="bi bi-telephone-inbound"></i><a href="tel:+573218306968">321 830 6968 </a> - <a href="tel:+573002204398"> 300 220 43 98</a></li>
+        <li><i class="bi bi-envelope-at"></i>
+          <a target="_blank" href="mailto:acical12@gmail.com">acical12@gmail.com</a>
+        </li>
+        <li><i class="bi bi-globe"></i><a target="_blank" href="https://www.acical.org">www.acical.org</a></li>
       </ul>
     </div>
     <div class="col-md-6 col-sm-12">
-      <h2>ENVÍANOS UN MENSAJE</h2>
+      <h2>Envíanos un mensaje</h2>
       <form>
         <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre completo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digita tu nombre...">
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Correo electrónico">
+          <label for="nombre">Correo electrónico</label>
+          <input type="email" class="form-control" id="exampleInputPassword1" placeholder="ejemplo@correo.com">
         </div>
         <div class="form-group">
-          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Número de teléfono">
+          <label for="nombre">Número de teléfono</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Ejemplo: 3001234567">
         </div>
         <div class="form-group">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Mensaje" style=" max-width: 90%; min-height: 150px; max-height: 150px;"></textarea>
+          <label for="nombre">Escribe tu mensaje</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Escribe en esta caja de texto tu mensaje..." style=" max-width: 90%; min-height: 150px; max-height: 150px;"></textarea>
         </div>
-        <br>
-        <button type="button" class="btn btn-success" onclick="enviarInformacion()">Enviar</button>
+        <button type="button" class="btn btn-success" onclick="enviarInformacion()"><i class="bi bi-send-check"></i>Enviar</button>
       </form>
     </div>
   </div>
