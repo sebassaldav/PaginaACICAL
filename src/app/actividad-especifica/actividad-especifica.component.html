@@ -7,9 +7,8 @@
           <div *ngFor="let algo of actividadEsp.items">
           <img [src]="algo.fields.registroFotografico.fields.file.url" alt="">
         </div>
-        <pre> {{ actividadEsp | json }}</pre>
       </main>
-
+      <a [routerLink]="['']">ATRÁS</a>
     </div>
   </div>
 </div>

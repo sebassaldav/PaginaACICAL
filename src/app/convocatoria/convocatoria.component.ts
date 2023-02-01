@@ -14,6 +14,7 @@ export class ConvocatoriaComponent implements OnInit {
   }
 
   convocatoriaPost$ : Observable <any> | undefined;
+  actividadesPost$ : Observable <any> | undefined;
 
   public open(modal: any): void {
     this.modalService.open(modal);
@@ -21,5 +22,6 @@ export class ConvocatoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.convocatoriaPost$ = this.contentfulService.getConvocatoriasContent();
+    this.actividadesPost$ = this.contentfulService.getActividadesContent();
   }
 }

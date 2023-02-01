@@ -1,12 +1,21 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-3">
+    <div class="col-md-4">
       <h1 style="justify-content: center;">CONVOCATORIA</h1>
       <br>
       <ul *ngIf="convocatoriaPost$ | async as convocatoriaPost">
         <div *ngFor="let convocatoriaPosts of convocatoriaPost.items">
             <li> <a [routerLink]="['convocatoria', convocatoriaPosts.sys.id]">{{ convocatoriaPosts.fields.tituloConvocatoria }}</a></li>
+        </div>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h1 style="justify-content: center;">LISTA DE ACTIVIDADES</h1>
+      <br>
+      <ul *ngIf="actividadesPost$ | async as actividadPost">
+        <div *ngFor="let actividadPosts of actividadPost.items">
+            <li> <a [routerLink]="['actividades', actividadPosts.sys.id]">{{ actividadPosts.fields.tituloActividad }}</a></li>
         </div>
       </ul>
     </div>
