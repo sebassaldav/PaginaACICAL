@@ -1,8 +1,8 @@
 .grid{
   float: left;
-  width: 150px;
+  width: 250px;
   text-align: center;
   margin: 5px;
-  height: 40px;
-  border: 2px solid black;
+  height: fit-content;
+  border: 1px solid black;
 }
