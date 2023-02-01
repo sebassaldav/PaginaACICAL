@@ -3,14 +3,11 @@
     <div class="col-md-12">
       <h1 style="justify-content: center; text-align: center;">Régimen Tributario Especial</h1>
       <section *ngIf="regimenTributarioPost$ | async as regimenTributarioPosts">
-        <div>
-          <div *ngFor="let regimenTributarioPost of regimenTributarioPosts.items">
-            <div class="grid">
-              <a [href]="regimenTributarioPost.fields.archivo.fields.file.url" target="_blank">
-                <h5>{{ regimenTributarioPost.fields.nombreArchivo }}</h5>
-              </a>
-            </div>
-          </div>
+        <div class="grid">
+          <a *ngFor="let regimenTributarioPost of regimenTributarioPosts.items" class="btn btn-light"
+            [href]="regimenTributarioPost.fields.archivo.fields.file.url" target="_blank">
+            <h5>{{ regimenTributarioPost.fields.nombreArchivo }}</h5>
+          </a>
         </div>
       </section>
     </div>
