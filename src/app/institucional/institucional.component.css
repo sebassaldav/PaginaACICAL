@@ -19,7 +19,10 @@ img{
 
 p{
   width: 100%;
-  height: 210px;
+  height: fit-content;
   text-align: justify;
 }
 
+.accordion-button{
+  background-color: white;
+}
