@@ -1,13 +1,37 @@
-li{
-  font-size: 30px;
-}
-
 ul
 {
   list-style: none;
+  padding-left: 0;
 }
 
+li{
+  padding-top: 15px;
+  align-items: center;
+  display: flex;
+}
 
-@media (max-width: 450px) {
-  li {font-size: 10px;}
+i{
+  margin-right: 5px;
+  font-size: 25px;
+}
+
+input, textarea{
+  margin-bottom: 10px;
+}
+
+label{
+  font-style: italic;
+  font-weight: 100;
+}
+
+.container-fluid{
+  padding: 15px;
+  background-color: #005227;
+  color: whitesmoke;
+}
+
+.btn{
+  background-color: #5069AD;
+  color: whitesmoke;
+  border: #5069AD;
 }

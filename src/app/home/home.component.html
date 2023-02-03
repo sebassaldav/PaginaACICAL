@@ -1,31 +1,31 @@
-<div class="container-fluid margen">
-  <div class="row">
-    <div class="col-md-12 col-sm-12">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 col-sm-12">
+<div class="container" id="inicio">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white">
+    <a class="navbar-brand" href="#">
       <div *ngIf="logoPost$ | async as logoPost">
-        <img
-          class="logo"
-          [src]="logoPost.fields.logotipo.fields.file.url"
-          alt=""
-        />
+        <img class="logo" [src]="logoPost.fields.logotipo.fields.file.url" alt="" />
+      </div>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Inicio</a>
+        <a class="nav-item nav-link" href="#institucional">Institucional</a>
+        <a class="nav-item nav-link" href="#regimen">Régimen tributario especial</a>
+        <a class="nav-item nav-link" href="#convocatoria">Convocatoria</a>
+        <a class="nav-item nav-link" href="#contacto">Contacto</a>
       </div>
     </div>
-    <div class="col-md-8 col-sm-12">
-      <h1>ASOCIACIÓN DE CABILDOS INDÍGENAS DE CALDAS</h1>
-    </div>
-  </div>
+    <span class="navbar-text gradient-text">
+      ASOCIACIÓN DE CABILDOS INDÍGENAS DE CALDAS
+    </span>
+  </nav>
 </div>
-<br>
+
 <app-carousel></app-carousel>
 <br>
-<app-institucional></app-institucional>
+<app-institucional id="institucional"></app-institucional>
 <br>
-<app-regimen></app-regimen>
+<app-regimen id="regimen"></app-regimen>
 <br>
-<app-convocatoria></app-convocatoria>
+<app-convocatoria id="convocatoria"></app-convocatoria>
 <br>
- <app-contacto></app-contacto>
+<app-contacto id="contacto"></app-contacto>
