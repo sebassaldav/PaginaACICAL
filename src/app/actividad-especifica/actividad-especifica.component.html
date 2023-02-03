@@ -1,14 +1,16 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" style="display: grid; place-items: center;">
       <main *ngIf="actividadEspecificaPost$ | async as actividadEsp">
           <h1>{{ actividadEsp.fields.tituloActividad }}</h1>
           <p>{{ actividadEsp.fields.descripcionActividad }}</p>
-          <div *ngFor="let algo of actividadEsp.items">
-          <img [src]="algo.fields.registroFotografico.fields.file.url" alt="">
-        </div>
-      </main>
+          <div  *ngFor="let algo of actividadEsp.fields.registroFotografico">
+            <img style="width: 400px; height: 200px;" [src]="algo.fields.file.url" alt="">
+          </div>
+        </main>
       <a [routerLink]="['']">ATRÁS</a>
+      <div class="col-md-2"></div>
     </div>
   </div>
 </div>
