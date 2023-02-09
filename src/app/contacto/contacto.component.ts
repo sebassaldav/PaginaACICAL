@@ -12,4 +12,7 @@ export class ContactoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  enviarInformacion(){
+    document.getElementById("formularioContacto")?.onreset;
+  }
 }
