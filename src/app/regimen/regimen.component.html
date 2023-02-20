@@ -1,13 +1,15 @@
-<div class="container-fluid">
+<div class="d-flex container-fluid">
   <div class="row">
     <div class="col-md-12">
       <h3 style="justify-content: center; text-align: center;">RÉGIMEN TRIBUTARIO ESPECIAL</h3>
       <section *ngIf="regimenTributarioPost$ | async as regimenTributarioPosts">
         <div class="grid">
-          <a *ngFor="let regimenTributarioPost of regimenTributarioPosts.items" class="btn btn-light"
-            [href]="regimenTributarioPost.fields.archivo.fields.file.url" target="_blank">
-            <h5>{{ regimenTributarioPost.fields.nombreArchivo }}</h5>
-          </a>
+          <div class="tile">
+            <a *ngFor="let regimenTributarioPost of regimenTributarioPosts.items" class="btn btn-light"
+              [href]="regimenTributarioPost.fields.archivo.fields.file.url" target="_blank">
+              <h5>{{ regimenTributarioPost.fields.nombreArchivo }}</h5>
+            </a>
+          </div>
         </div>
       </section>
     </div>
