@@ -4,6 +4,12 @@
   margin: 10px;
 }
 
+@media only screen and (max-width: 768px){
+  h3{
+    margin-top: 100px;
+  }
+}
+
 .grid{
   float: left;
   width: 24%;
