@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, Observable } from 'rxjs';
 import { ContentfulService } from '../services/contentful.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-convocatoria-especifica',
@@ -10,7 +11,7 @@ import { ContentfulService } from '../services/contentful.service';
 })
 export class ConvocatoriaEspecificaComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private contentfulService: ContentfulService) { }
+  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer, private contentfulService: ContentfulService) { }
 
   convocatoriaEspecificaPost$: Observable <any> | undefined;
 
@@ -22,4 +23,8 @@ export class ConvocatoriaEspecificaComponent implements OnInit {
       }
     )
   }
+
+  getSafeUrl(url: string): SafeResourceUrl {
+  return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+}
 }
