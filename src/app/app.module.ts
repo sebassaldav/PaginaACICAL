@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
-
+import { NgxPaginationModule } from 'ngx-pagination';
     
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +34,8 @@ import { ActividadEspecificaComponent } from './actividad-especifica/actividad-e
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

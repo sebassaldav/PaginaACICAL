@@ -13,10 +13,17 @@ export class ActividadesComponent implements OnInit {
   }
 
   actividadesPost$ : Observable <any> | undefined;
-
+  random: any;
 
   ngOnInit(): void {
     this.actividadesPost$ = this.contentfulService.getActividadesContent();
+    this.random = Math.floor((Math.random() * 4) + 1);
+  }
+  
+  getRandomNum()
+  {
+    this.random = Math.floor((Math.random() * 4) + 1);
   }
 
 }
+

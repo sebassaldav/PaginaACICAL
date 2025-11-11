@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
 import { ContentfulService } from '../services/contentful.service';
 
+
 @Component({
   selector: 'app-convocatoria',
   templateUrl: './convocatoria.component.html',
@@ -14,7 +15,9 @@ export class ConvocatoriaComponent implements OnInit {
   }
 
   convocatoriaPost$ : Observable <any> | undefined;
-  actividadesPost$ : Observable <any> | undefined;
+
+  page: number = 1;   
+  pageSize: number = 7; 
 
   public open(modal: any): void {
     this.modalService.open(modal);
@@ -22,6 +25,6 @@ export class ConvocatoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.convocatoriaPost$ = this.contentfulService.getConvocatoriasContent();
-    this.actividadesPost$ = this.contentfulService.getActividadesContent();
   }
+
 }

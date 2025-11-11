@@ -1,31 +1,30 @@
 <div class="container-fluid">
   <div class="row">
-    <!-- <div class="col-md-2"></div> -->
-    <div class="col-md-6 content">
-      <div class="centered-content">
-        <h4>CONVOCATORIAS</h4>
-        <ul *ngIf="convocatoriaPost$ | async as convocatoriaPost">
-          <div *ngFor="let convocatoriaPosts of convocatoriaPost.items">
-            <li> <a [routerLink]="['convocatoria', convocatoriaPosts.sys.id]">{{
-                convocatoriaPosts.fields.tituloConvocatoria }}</a></li>
-          </div>
-        </ul>
-      </div>
+
+    <div>
+      <h4>CONVOCATORIAS</h4>
+      <table id="convocatoria" class="table table-striped table-bordered" style="align-items:flex-start;" *ngIf="convocatoriaPost$ | async as convocatoriaPost">
+        <thead>
+          <tr style="text-align: center;">
+            <th class="th-convocatoria" scope="col">Convocatoria</th>
+            <th scope="col">Fecha Vencimiento</th>
+            <th scope="col">Visualizar</th>
+          </tr>
+        </thead>
+            <tbody >
+              <tr *ngFor="let convocatoriaPosts of convocatoriaPost.items | paginate: { itemsPerPage: pageSize, currentPage: page }; ">
+                <td class="td-convocatoria"> {{convocatoriaPosts.fields.tituloConvocatoria }} </td>
+                <td style="text-align: center;">31 de Diciembre de 2025</td>
+                <td style="text-align: center;"><a [routerLink]="['convocatoria', convocatoriaPosts.sys.id]"> <i class="bi bi-file-earmark"></i> </a> </td>
+              </tr>
+            </tbody>
+      </table>
+
+      <pagination-controls (pageChange)="page = $event"
+       [previousLabel]="'Anterior'"
+       [nextLabel]="'Siguiente'"
+      ></pagination-controls>      
     </div>
-
-    <div class="col-md-6 content">
-      <div class="centered-content">
-        <h4>LISTA DE ACTIVIDADES</h4>
-        <ul *ngIf="actividadesPost$ | async as actividadPost">
-          <div *ngFor="let actividadPosts of actividadPost.items">
-            <li> <a [routerLink]="['actividades', actividadPosts.sys.id]">{{ actividadPosts.fields.tituloActividad}}</a>
-            </li>
-          </div>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- <div class="col-md-2"></div> -->
+    
   </div>
 </div>
