@@ -38,3 +38,13 @@ a:visited{
 .th-convocatoria{
     width: 80%;
 }
+
+@media only screen and (max-width: 768px){
+  .td-convocatoria{
+    width: fit-content;
+}
+
+.th-convocatoria{
+    width: fit-content;
+}
+}
