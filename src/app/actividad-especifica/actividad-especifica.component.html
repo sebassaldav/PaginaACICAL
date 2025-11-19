@@ -3,15 +3,14 @@
     <div class="col-md-2">
       <h1> <a [routerLink]="['']"> <i class="bi bi-arrow-left-square icon"></i> </a> </h1>
     </div>
-    <div class="col-md-8 background" style="display: grid; place-items: center; align-items: start;">
+    <div class="col-md-8 background">
       <main *ngIf="actividadEspecificaPost$ | async as actividadEsp">
           <h1>{{ actividadEsp.fields.tituloActividad }}</h1>
-          <p>{{ actividadEsp.fields.descripcionActividad }}</p>
-          <div  *ngFor="let algo of actividadEsp.fields.registroFotografico">
-            <img style="width: 400px; height: 200px;" [src]="algo.fields.file.url" alt="">
+          <p style="text-align: justify;">{{ actividadEsp.fields.descripcionActividad }}</p>
+          <div class="grid">
+            <img *ngFor="let algo of actividadEsp.fields.registroFotografico" class="image img-thumbnail" [src]="algo.fields.file.url" alt="">
           </div>
         </main>
-      <a [routerLink]="['']">ATRÁS</a>
       <div class="col-md-2"></div>
     </div>
   </div>
