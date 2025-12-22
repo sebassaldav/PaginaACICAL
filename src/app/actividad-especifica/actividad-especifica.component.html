@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-8 background">
       <main *ngIf="actividadEspecificaPost$ | async as actividadEsp">
-          <h1>{{ actividadEsp.fields.tituloActividad }}</h1>
+          <h1 style="text-align: center;">{{ actividadEsp.fields.tituloActividad }}</h1>
           <p style="text-align: justify;">{{ actividadEsp.fields.descripcionActividad }}</p>
           <div class="grid">
             <img *ngFor="let algo of actividadEsp.fields.registroFotografico" class="image img-thumbnail" [src]="algo.fields.file.url" alt="">

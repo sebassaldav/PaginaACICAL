@@ -1,6 +1,7 @@
+<div class="separator"></div>
 <div class="container-fluid">
   <div class="row">
-  <h4>LISTA DE ACTIVIDADES</h4>
+  <h4 style="text-align: center;">LISTA DE ACTIVIDADES</h4>
       
     <div class="grid" *ngIf="actividadesPost$ | async as actividadPost">
       <div *ngFor="let actividadPosts of actividadPost.items" >
@@ -21,7 +22,7 @@
                 <h5 class="card-title">{{ actividadPosts.fields.tituloActividad }}</h5>
               </div>
             </div>
-            <div class="card-footer bg-transparent" style="text-align: center;"> <a [routerLink]="['actividades', actividadPosts.sys.id]">Ver más...</a> </div>
+            <div class="card-footer bg-transparent" style="text-align: center;"> <a [routerLink]="['actividades', actividadPosts.sys.id]"> Ver más </a> </div>
           </div>
         </div>
 

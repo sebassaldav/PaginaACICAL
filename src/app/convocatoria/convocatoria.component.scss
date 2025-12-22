@@ -7,6 +7,12 @@
     max-height: fit-content;
 }
 
+.separator{
+  background: linear-gradient(90deg, rgba(0,153,255,1) 0%, rgba(85,181,21,1) 29%, rgba(255,251,0,1) 60%, rgba(255,0,0,1) 100%);
+  height: 5px;
+  margin: 10px 0;
+}
+
 .centered-content{
     margin-top: 15px;
     width: fit-content;
@@ -24,11 +30,10 @@ ul{
 
 a{
     color: black;
-
 }
 
 a:visited{
-    color: #7D0071;
+    color: #2199e8;
 }
 
 .td-convocatoria{
@@ -40,11 +45,17 @@ a:visited{
 }
 
 @media only screen and (max-width: 768px){
-  .td-convocatoria{
-    width: fit-content;
+  
+    table{
+        max-width: 90svw;
+    }
+
+    .td-convocatoria{
+        width: 60%;
+    }
+
+    .th-convocatoria{
+        width: 60%;
+    }
 }
 
-.th-convocatoria{
-    width: fit-content;
-}
-}

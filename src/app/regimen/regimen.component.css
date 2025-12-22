@@ -20,21 +20,27 @@
 
 .container-fluid{
   padding: 15px;
-  background-color: #fff8a7;
+  /* background-color: #fff8a7; */
 }
 
 .btn-light{
-  background-color: #5069AD;
+  background-color: #2199e8;
   color: whitesmoke;
-  border: #5069AD;
+  border: #2199e8;
 }
 
 .btn-light:hover{
-  background-color: #668EFA;
+  background-color: #22a7ff;
   border: white;
 }
 
 h5{
   width: 100%;
   text-align: center;
+}
+
+.separator{
+  background: linear-gradient(90deg, rgba(0,153,255,1) 0%, rgba(85,181,21,1) 29%, rgba(255,251,0,1) 60%, rgba(255,0,0,1) 100%);
+  height: 5px;
+  margin: 10px 0;
 }
