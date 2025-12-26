@@ -47,15 +47,19 @@ a:visited{
 @media only screen and (max-width: 768px){
   
     table{
-        max-width: 90svw;
+        max-width: 95svw;
     }
 
     .td-convocatoria{
-        width: 60%;
+        width: fit-content;
     }
 
     .th-convocatoria{
-        width: 60%;
+        width: fit-content;
+    }
+
+    .hide{
+        display: none;
     }
 }
 

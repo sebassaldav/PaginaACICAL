@@ -8,14 +8,14 @@
         <thead>
           <tr style="text-align: center;">
             <th class="th-convocatoria" scope="col">Convocatoria</th>
-            <th scope="col">Fecha Vencimiento</th>
+            <th class="hide" scope="col">Fecha Vencimiento</th>
             <th scope="col">Visualizar</th>
           </tr>
         </thead>
             <tbody >
               <tr *ngFor="let convocatoriaPosts of convocatoriaPost.items | paginate: { itemsPerPage: pageSize, currentPage: page }; ">
                 <td class="td-convocatoria"> {{convocatoriaPosts.fields.tituloConvocatoria }} </td>
-                <td style="text-align: center;">31/12/2025</td>
+                <td class="hide" style="text-align: center;">31/12/2025</td>
                 <!-- <td style="text-align: center;">{{convocatoriaPosts.fields.fechaVencimiento | date : "d/M/y"}}</td> -->
                 <td style="text-align: center;"><a [routerLink]="['convocatoria', convocatoriaPosts.sys.id]"> <i class="bi bi-file-earmark"></i> </a> </td>
               </tr>

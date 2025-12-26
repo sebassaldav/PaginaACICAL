@@ -6,7 +6,7 @@ ul
 
 li{
   align-items: center;
-  display: flex;
+  /* display: flex; */
   font-size: large;
 }
 
@@ -75,4 +75,27 @@ a:hover .tooltiptext {
   font-size: xx-small;
   height: 15px;
   transform: translateY(-1px);
+}
+
+@media only screen and (max-width: 768px){
+  
+  .tooltiptext {
+    top: -200%;   /* aparece debajo del ícono */
+    left: -100%;   /* centrado respecto al enlace */
+    font-size: x-small;
+  }
+
+}
+
+@media (768px <= width <= 1500px){
+  .tooltiptext {
+    top: -200%;   /* aparece debajo del ícono */
+    left: -200%;   /* centrado respecto al enlace */
+    font-size: x-small;
+  }
+
+  img{
+  width: 200px;
+  height: 150px;
+}
 }

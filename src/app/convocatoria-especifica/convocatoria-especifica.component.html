@@ -5,8 +5,12 @@
     </div>
     <div class="col-md-8 col-sm-12 background" style="display: grid; place-items: center; align-items: start;">
       <main *ngIf="convocatoriaEspecificaPost$ | async as convoEsp">
-            <h1>{{ convoEsp.fields.tituloConvocatoria }}</h1>
-            <p>{{ convoEsp.fields.descripcionConvocatoria }}</p>
+            <h1 class="titulo">{{ convoEsp.fields.tituloConvocatoria }}</h1>
+            <br>
+            <!-- <h5 style="text-align: justify;">Fecha de vencimiento: {{convoEsp.fields.fechaVencimiento}}</h5> -->
+            <h5 class="justifica">Fecha de vencimiento: 31/12/2025</h5>
+            <br>
+            <p class="justifica">{{ convoEsp.fields.descripcionConvocatoria }}</p>
             <iframe
             [src]="getSafeUrl(convoEsp.fields.oficioConvocatoria.fields.file.url)"
             width="100%"
